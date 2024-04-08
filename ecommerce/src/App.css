@@ -1,0 +1,13 @@
+@media (max-width:576px){
+        .hemburger{
+    display: block;
+}
+    .navbar{
+        display: none;
+    }
+
+}
+
+.hemburger{
+    display: none;
+}

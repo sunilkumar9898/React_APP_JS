@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@media (max-width:576px){
-    .navbar{
-        background-color: red;
-        display: none;
-    }
-}
