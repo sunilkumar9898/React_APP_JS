@@ -14,7 +14,7 @@ const Home = () => {
           arr.push(item);
           localStorage.setItem("ecomData", JSON.stringify(arr));
         alert("success");
-        
+
     }
 
   }
