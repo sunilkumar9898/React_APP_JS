@@ -13,13 +13,13 @@ const CartDetails = () => {
 
   return (
       <div>
-          <div className="pt-5 px-20 flex gap-1 items-center font-bold underline text-blue-600 text-xl">
+          <div className="pt-5 px-20 flex gap-1 items-center font-bold underline text-blue-600 text-xl ">
               <span>
                   <IoMdArrowRoundBack />
               </span>
               <Link to={"/"}>Back</Link>
           </div>
-          <div className="mt-20 shadow-2xl  w-2/3 m-auto">
+          <div className="mt-20 shadow-2xl  w-2/3 m-auto mb-20">
               {arr.map((item, index) => {
                   return (
                       <div

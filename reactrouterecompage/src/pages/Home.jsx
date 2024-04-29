@@ -27,12 +27,12 @@ const Home = () => {
     }
     return (
         <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 px-10 mt-16 gap-10 gap-y-20">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 px-10 mt-16 gap-10 gap-y-20 mb-20">
                 {Product.map((ele) => {
                     return (
-                        <div key={ele.id} className="shadow-xl p-5 group">
+                        <div key={ele.id} className="shadow-xl p-5 group ">
                             <Link to={"/carddetails"}>
-                                {" "}
+                                
                                 <img
                                     onClick={() => cardDetails(ele)}
                                     className="group-hover:scale-95 duration-1000 cursor-pointer"

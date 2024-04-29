@@ -8,7 +8,7 @@ import { CiYoutube } from "react-icons/ci";
 const Footer = () => {
     return (
         <div>
-            <div className="bg-black text-white font-small mt-20">
+            <div className="bg-black text-white font-small ">
                 <div className="flex flex-wrap justify-around pt-32 pb-16 cursor-pointer">
                     <div className=" w-96 my-auto">
                         <img

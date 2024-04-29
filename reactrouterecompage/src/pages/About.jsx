@@ -30,7 +30,7 @@ const About = () => {
 
     return (
         <div>
-            <div className="mt-10 shadow-2xl p-20 container m-auto border border-gray-200 rounded-xl">
+            <div className="mt-10 shadow-2xl p-20 container m-auto border border-gray-200 rounded-xl mb-32">
                 {cartValue.map((item, index) => {
                     return (
                         <div

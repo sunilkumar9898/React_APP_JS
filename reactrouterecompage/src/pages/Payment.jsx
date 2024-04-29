@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Payment = () => {
 
@@ -9,10 +10,17 @@ const Payment = () => {
         sum = sum + cartpay[i].quantity * cartpay[i].price;
     }
 
-    console.log(sum ,"123456");
+    const payment = () => {
+        alert("Congratulations For Shopping 🎉🎉🎉🎊🎊✌️✌️👍👍")
+        localStorage.clear();
+        window.location.href ='/'
+  }
   return (
       <div className="   bg-gray-400 p-5 ">
-          <div className="container m-auto flex justify-between mt-20 mb-28">
+          <div className=" px-44 font-medium  text-xl underline text-blue-600 pt-10">
+              <Link to={"/about"}>Edit cart</Link>
+          </div>
+          <div className="container m-auto flex justify-between flex-wrap mt-20 mb-28">
               <div className="w-3/5 bg-gray-200 p-5 rounded">
                   <div className="flex justify-between items-center bg-gray-100 shadow-xl p-8">
                       <div>
@@ -132,7 +140,7 @@ const Payment = () => {
                           <h1>Taxes</h1>
                       </div>
                       <div className="flex flex-col gap-3 font-bold text-xl text-black ">
-                          <h1>₹ ,{sum}</h1>
+                          <h1>₹ {sum}</h1>
                           <h1>
                               ₹ <del>40</del> <span>Free</span>
                           </h1>
@@ -161,6 +169,11 @@ const Payment = () => {
                           Safe and Secure Payments. Easy returns. 100% Authentic
                           products.
                       </h1>
+                  </div>
+                  <div className="mt-10 bg-green-700 p-3 text-center text-white font-normal ">
+                      <button className="uppercase" onClick={payment}>
+                          Payment
+                      </button>
                   </div>
               </div>
           </div>
