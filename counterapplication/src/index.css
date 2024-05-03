@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --color-primary: red;
+    --color-secondary: #ffb116;
+    --font-Size: 20px;
+    --background-color: green;
+    --border: 1px dotted gray;
+    --btn-bgc: rgb(174, 143, 20);
+    --btn-hover: rgb(20, 223, 34);
+    --cursor: pointer;
+    --radius: 5px;
+
+}

@@ -1,5 +1,6 @@
 
 import "./App.css"
+import Counter from "./pages/Counter";
 import Product from "./pages/Product";
 import UserForm from "./pages/UserForm";
 function App () {
@@ -7,9 +8,11 @@ function App () {
 
   return (
     <div className="App">
+      <Counter />
       <UserForm />
       <hr />
-      <Product />
+      {/* <Product /> */}
+      
     </div>
   );
 }

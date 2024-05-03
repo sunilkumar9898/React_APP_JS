@@ -1,0 +1,93 @@
+body{
+    box-sizing: border-box;
+}
+
+.form{
+border-top: 5px solid green;
+  width: 30%;
+  color: #6d7371;
+  margin:100px auto;
+  padding: 20px;
+  border-radius: 5px;
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+.form h1{
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 0px;
+  font-size: 25px;
+
+}
+
+form input{
+  width: 100%;
+border: 2px solid gray;
+  padding: 4px 5px;
+  outline: none;
+  transition: all 0.30s ease-in-out;
+
+
+}
+
+.new_container{
+  border: var(--border);
+  color: var(--color-secondary);
+  background-color: var(--background-color);
+}
+.new_container p{
+  font-size: var(--font-Size);
+}
+.new_container button{
+  background-color: var(--btn-bgc);
+  border-radius: var(--radius);
+}
+.new_container button:hover{
+  background-color: var(--btn-hover);
+
+}
+form input:focus{
+box-shadow: 0 0 2px 1px rgba(147, 234, 7, 0.5);
+  border: 2px solid green;
+  border-radius: 2px;
+}
+.btn{
+  margin-top: 40px;
+}
+form button:hover{
+  background-color: rgb(26, 201, 26);
+}
+form button{
+  display: flex;
+  margin: auto;
+  text-align: center;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+form div{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-top: 10px;
+  /* justify-content: space-evenly; */
+  /* gap: 20px 50px; */
+}
+
+label{
+ color: #414544;;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+
+
+
+
