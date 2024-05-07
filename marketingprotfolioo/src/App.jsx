@@ -10,6 +10,13 @@ import youtube from "./assets/img/youtube.png";
 function App() {
     const [count, setCount] = useState(0);
 
+const intervel=    setInterval(() => {
+        console.log("running");
+}, 2000);
+    setTimeout(() => {
+        clearInterval(intervel)
+    }, 5000);
+
     return (
         <>
             <div className="container">
