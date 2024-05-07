@@ -1,5 +1,4 @@
-// 20240408105454
-// https://helpful-gray-rooster.cyclic.app/airports
+
 
 export const Data =[        {
             "id": 1,
@@ -221,5 +220,5 @@ export const Data =[        {
             "category": "jumpsuit",
             "rating": 4
         },
-        
+
     ];

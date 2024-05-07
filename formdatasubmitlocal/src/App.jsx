@@ -4,6 +4,7 @@ import SignupCard from "./pages/Registration";
 import Navbar from "./Components/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SimpleCard from "./pages/Login";
+import { ContactUs } from "./pages/Email";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<SignupCard />} />
                     <Route path="/login" element={<SimpleCard />} />
+                    <Route path="/email" element={<ContactUs/>} />
                 </Routes>
             </div>
         </BrowserRouter>
