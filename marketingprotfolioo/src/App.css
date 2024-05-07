@@ -172,10 +172,10 @@ place-self: center;
  .search input{
   margin-top: 10px;
 width: 22%;
-padding: 6px 0px;
+padding: 12px 0px;
  }
  .search button{
-  padding: 8px 15px;
+  padding: 14px 15px;
   border: none;
   background-color: black;
   color: white;
@@ -188,7 +188,6 @@ padding: 6px 0px;
  .footer{
   width: 100%;
   display: flex;
-
   justify-content: space-between;
 
  }
@@ -307,9 +306,132 @@ margin-bottom: 20px;
 
 
   @media (min-width:220px) and (max-width:420px) {
+    .logo{
+  width: 100%;
+  color: rgb(254, 135, 7);
+margin-left: 120px;
+    position: relative;
+}
     .nav_container{
       display: block;
+        height:450px;
     }
+    #img_sec{
+      display: none;
+    }
+
+    #lorem_text{
+      display: none;
+    }
+    .Home_container{
+      display: flex;
+      width: 100%;
+    }
+    .home_section{
+      width: 50%;
+      display: block;
+      padding: 10px;
+
+    }
+    .home_img_section{
+  width:50%;
+  height: 250px;
+
+}
+.home_section p{
+  padding-top: 15px;
+  font-size: 22px;
+}
+
+.btn{
+display: flex;
+width: 98%;
+  justify-content: space-between;
+
+}
+.btn button{
+  padding: 8px 5px;
+  font-size: 9px;
+  border: none;
+  /* font-weight: bold; */
+
+}
+.photo_section{
+  width: 100%;
+  margin: auto;
+padding: 0px 20px;
+  /* padding: 50px 0px; */
+}
+.manager_pic{
+  width: 100%;
+  gap: 40px 40px;
+  display: grid;
+grid-template-columns: repeat(2,1fr);
+
+}
+ .footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+
+ }
+
+  .footer_img{
+
+  width: 100%;
+
+ }
+
+
+ .footer_a{
+  width: 100%;
+  display: block;
+ }
+
+
+ .footer_a ul li:nth-child(1){
+font-size: 30px;
+font-weight: bold;
+ }
+
+ .social_icon img{
+  width: 10%;
+ }
+
+
+.footer_line a{
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  padding: 20px 30px;
+}
+
+#main_section{
+  background-color: black;
+  color: white;
+  padding: 20px 0px;
+
+}
+.main_icon{
+  width: 95%;
+}
+
+.main_icon img{
+  width: 20%;
+  padding: 0px 10px;
+
+}
+
+  }
+
+
+
+  @media (min-width:421px) and (max-width:768px) {
+    .nav_container{
+      display: block;
+      height: 480px;
+    }
+
     #img_sec{
       display: none;
     }
@@ -317,14 +439,88 @@ margin-bottom: 20px;
       display: none;
     }
     .Home_container{
-      display: block;
+      display: flex;
       width: 100%;
-      flex-direction: column-reverse;
     }
     .home_section{
-      display: flex;
+      width: 48%;
+      display: block;
+      padding:10px;
+
     }
-    .logo{
-      display: flex;
-    }
+    .home_img_section{
+  width:50%;
+  height: 250px;
+
+}
+.home_section p{
+  padding-top: 15px;
+  font-size: 30px;
+}
+
+.btn{
+  margin-top: 24px;
+display: flex;
+width: 90%;
+justify-content: space-between;
+
+}
+
+.photo_section{
+  width: 100%;
+  margin: auto;
+padding: 0px 20px;
+}
+.manager_pic{
+  width: 100%;
+  gap: 40px 40px;
+  display: grid;
+grid-template-columns: repeat(3,1fr);
+
+}
+ .footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+
+ }
+
+  .footer_img{
+  width: 100%;
+
+ }
+
+
+ .footer_a{
+  width: 100%;
+  display: flex;
+ }
+
+
+ .footer_a ul li:nth-child(1){
+font-size: 30px;
+font-weight: bold;
+ }
+
+ .social_icon img{
+  width: 10%;
+ }
+
+
+.footer_line a{
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  padding: 20px 30px;
+}
+.main_icon{
+  width: 98%;
+}
+
+.main_icon img{
+  width: 15%;
+  padding: 0px 10px;
+
+}
+
   }
