@@ -12,11 +12,13 @@ let url = "http://localhost:8000/Data";
 function App() {
     const [details, setDetails] = useState(formdetails);
     const [response, setResponse] = useState([]);
-  const [selected, setSelected] = useState("");
-  const [updatevalue,setUpdatevalue] = useState(" ")
+    const [selected, setSelected] = useState("");
 
     // const [filtername, setFiltername] = useState(" ");
-    // const [refresh, setRefresh] = useState(false);
+    const [search, Setsearch] = useState("");
+    let searchData = response.filter((ele) =>
+        ele.name.toLowerCase().includes(search.toLowerCase())
+    );
 
     const inputvalue = (e) => {
         e.preventDefault();
@@ -28,10 +30,15 @@ function App() {
 
     const submitbtn = async () => {
         try {
-            await axios.post(url, details);
+            if (updatevalue) {
+                await axios.patch(`${url}/${updatevalue}`, details);
+            } else {
+                await axios.post(url, details);
+            }
+
             setDetails(formdetails);
             getData();
-            // setRefresh(true);
+
             console.log(details);
         } catch (error) {
             console.log(error);
@@ -51,25 +58,23 @@ function App() {
         getData();
     }, []);
 
-
-  const delData = async(id) => {
-try {
-  let del = await axios.delete(`http://localhost:8000/Data/${id}`);
-  getData()
-  console.log(del);
-} catch (error) {
-console.log(error);
-}
-  }
+    const delData = async (id) => {
+        try {
+            let del = await axios.delete(`http://localhost:8000/Data/${id}`);
+            getData();
+            console.log(del);
+        } catch (error) {
+            console.log(error);
+        }
+    };
 
     // <---------------for filtet value based on name------------>
 
-  const selectedValue = (e) => {
-  setSelected(e.target.value)
-}
+    const selectedValue = (e) => {
+        setSelected(e.target.value);
+    };
 
-  let filterdata = selected ? response.filter((ele) => ele.name === selected) : response;
-
+    // let filterdata = selected ? response.filter((ele) => ele.name === selected) : response;
 
     return (
         <>
@@ -109,8 +114,8 @@ console.log(error);
                     <input
                         type="text"
                         placeholder="SEARCH BY NAME"
-                        value={selected}
-                        onChange={selectedValue}
+                        value={search}
+                        onChange={(e)=>Setsearch(e.target.value)}
                     />
                     <select
                         name=""
@@ -135,14 +140,14 @@ console.log(error);
                         </tr>
                     </thead>
                     <tbody>
-                        {filterdata.length &&
-                            filterdata.map((item, index) => (
+                        {searchData.length &&
+                            searchData.map((item, index) => (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
                                     <td>{item.name}</td>
                                     <td>
                                         <a href={item.url} target="_blank">
-                                            {item.url.slice(0,40) + "......"}
+                                            {item.url.slice(0, 40) + "......"}
                                         </a>
                                     </td>
                                     <td>{item.date}</td>
