@@ -442,6 +442,7 @@ font-weight: bold;
     .Home_container{
       display: flex;
       width: 100%;
+    
     }
     .home_section{
       width: 48%;

@@ -1,0 +1,108 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  background-color: #343a4039;
+
+  width: 30%;
+  padding: 50px;
+  margin:50px auto;
+display: flex;
+gap: 10px;
+flex-direction: column;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.container input,select{
+  padding: 8px 10px;
+}
+
+.container button{
+  /* width: 30%; */
+  display: flex;
+  margin: auto;
+  border: none;
+  background-color: green;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tabledata{
+  width: 80%;
+  margin:100px auto;
+/* box-shadow: rgba(176, 166, 235, 0.88) 0px 48px 100px 0px; */
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding: 25px;
+}
+.tabledata table{
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+  width: 100%;
+}
+.tabledata table th ,tr,td{
+  border: 1px solid rgba(147, 142, 142, 0.53);
+  padding: 9px ;
+}
+
+.searchValue{
+  text-align: end;
+  padding: 10px 0px;
+  display: flex;
+  gap: 20px;
+
+}
+.searchValue input{
+  padding: 10px 10px;
+  background-color: #343a4039;
+outline: none;
+border: none;
+  width: 40%;
+
+}
+
+table th{
+  background-color: #343a40;
+  color: white;
+}
+
+table tr:nth-child(odd){
+  background-color: rgb(249, 243, 243);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.307);
+}
+table tr:nth-child(even){
+  background-color: rgba(154, 228, 216, 0.681);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.307);
+
+}
+
+tbody button:nth-child(1){
+  background-color: rgb(227, 58, 58);
+  border: none;
+  padding: 5px ;
+  font-weight: bold;
+  cursor: pointer;
+}
+tbody button:nth-child(1):hover{
+  transition: .3s ease-in-out;
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+tbody button:nth-child(2){
+  background-color: rgb(226, 168, 20);
+  border: none;
+  padding: 5px ;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+tbody button{
+margin-left: 20px;
+  gap: 10px;
+}

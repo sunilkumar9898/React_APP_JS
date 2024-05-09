@@ -4,7 +4,7 @@ import { useToast } from "@chakra-ui/react";
 
 export const ContactUs = () => {
     const form = useRef();
-      const toast = useToast();
+    const toast = useToast();
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -59,7 +59,7 @@ export const ContactUs = () => {
                     name="message"></textarea>
                 <br />
                 <br />
-                <button className="flex mx-auto bg-green-800 px-12 text-white p-2 rounded">
+                <button className="flex mx-auto bg-green-600 px-12 text-white p-2 rounded hover:bg-green-900 transition duration-300 ease-out hover:ease-in">
                     Submit
                 </button>
             </div>

@@ -1,0 +1,68 @@
+.container{
+    background-color: rgba(104, 101, 97, 0.22);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 30%;
+    margin:150px auto;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.container select{
+    border: 1px solid black;
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.container input{
+    border: 1px solid black;
+    width: 100%;
+    padding: 8px 10px;
+
+    border-radius: 5px;
+
+}
+
+.container button{
+    border: 1px solid green;
+    padding: 8px 20px;
+    background-color: green;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+
+table{
+    width: 100%;
+
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+table tr th, td {
+    border: 1px solid black;
+
+}
+
+.tabledata{
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    background-color: rgba(195, 209, 195, 0.415);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+}
+.searchValue input{
+    border: 1px solid black;
+    width: 40%;
+    padding: 10px;
+float: right;
+padding: 5px;
+margin: 10px 0px;
+}

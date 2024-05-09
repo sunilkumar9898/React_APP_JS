@@ -9,16 +9,23 @@ import youtube from "./assets/img/youtube.png";
 
 function App() {
     const [count, setCount] = useState(0);
+//     const [color, setColor] = useState("black");
 
-const intervel=    setInterval(() => {
-        console.log("running");
-}, 2000);
-    setTimeout(() => {
-        clearInterval(intervel)
-    }, 5000);
+// const colorchange = () => {
+//     let newColor = "#";
+//     const charters = "abcdef123456";
+//     for (let i = 0; i < 6; i++) {
+//         newColor += charters[Math.floor(Math.random() * charters.length)];
+//     }
+//     setColor(newColor);
+// };
+
 
     return (
         <>
+            {/* <button
+                onClick={colorchange}
+                style={{ backgroundColor: color }}>Hello </button> */}
             <div className="container">
                 <div className="nav_container">
                     <div className="logo">
@@ -61,7 +68,6 @@ const intervel=    setInterval(() => {
                 </div>
                 <div className="home_img_section"></div>
             </div>
-
             <section id="main_section">
                 <div className="main_icon">
                     <img
@@ -89,7 +95,7 @@ const intervel=    setInterval(() => {
                     <div className="manager_pic">
                         {Data.map((item) => {
                             return (
-                                <div>
+                                <div key={item.id}>
                                     <img src={item.img} alt="" />
                                     <p>{item.name}</p>
                                     <p>{item.lanstname}</p>
@@ -100,7 +106,6 @@ const intervel=    setInterval(() => {
                     </div>
                 </div>
             </section>
-
             <section id="search">
                 <div className="search">
                     <h2>LET'S STAY IN TOUCH</h2>

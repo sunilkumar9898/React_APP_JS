@@ -1,41 +1,57 @@
-
-import {Flex,Box,FormControl,FormLabel,Input,Checkbox,Stack,Button,Heading,Text,useColorModeValue,} from "@chakra-ui/react";
-import {Table,Thead,Tbody,Tfoot,Tr,Th,Td,TableCaption,TableContainer,} from "@chakra-ui/react";
+import {
+    Flex,
+    Box,
+    FormControl,
+    FormLabel,
+    Input,
+    Checkbox,
+    Stack,
+    Button,
+    Heading,
+    Text,
+    useColorModeValue,
+} from "@chakra-ui/react";
+import {
+    Table,
+    Thead,
+    Tbody,
+    Tfoot,
+    Tr,
+    Th,
+    Td,
+    TableCaption,
+    TableContainer,
+} from "@chakra-ui/react";
 import { useState } from "react";
 
-let arr = JSON.parse(localStorage.getItem("emaildata")) || []
+let arr = JSON.parse(localStorage.getItem("emaildata")) || [];
 const loginDetails = {
-    email: "",
-    pass: "",
-    name:""
-}
+    name: "",
+    link: "",
+    date: "",
+};
 const SimpleCard = () => {
     const [details, setDetails] = useState(loginDetails);
 
     const handlelogin = (e) => {
         const { name, value } = e.target;
         setDetails((prev) => {
-            return { ...prev, [name]: value }
+            return { ...prev, [name]: value };
         });
-    }
+    };
 
     const handleloginsubmit = () => {
         arr.push(details);
-        localStorage.setItem("emaildata",JSON.stringify(arr))
+        localStorage.setItem("emaildata", JSON.stringify(arr));
         console.log(details);
         setDetails(loginDetails);
-        alert("success")
-    }
-
+        alert("success");
+    };
 
     const deleteData = (index) => {
         arr.splice(index, 1);
         localStorage.setItem("emaildata", JSON.stringify(arr));
     };
-
-
-
-
 
     return (
         <>
@@ -70,18 +86,18 @@ const SimpleCard = () => {
                                 <Input
                                     type="email"
                                     onChange={handlelogin}
-                                    name="email"
-                                    value={details.email}
+                                    name="link"
+                                    value={details.link}
                                 />
                             </FormControl>
 
                             <FormControl id="password">
                                 <FormLabel>Password</FormLabel>
                                 <Input
-                                    type="password"
+                                    type="date"
                                     onChange={handlelogin}
-                                    name="pass"
-                                    value={details.pass}
+                                    name="date"
+                                    value={details.date}
                                 />
                             </FormControl>
 
@@ -121,17 +137,18 @@ const SimpleCard = () => {
                             <Th>Email</Th>
                             <Th isNumeric>Password</Th>
                             <Th isNumeric>Action</Th>
-
                         </Tr>
                     </Thead>
                     <Tbody>
-                        {arr.map((ele,index) => {
+                        {arr.map((ele, index) => {
                             return (
                                 <Tr>
                                     <Td>{index + 1}</Td>
                                     <Td>{ele.name}</Td>
-                                    <Td>{ele.email}</Td>
-                                    <Td isNumeric>{ele.pass}</Td>
+                                    <Td>
+                                        <a href="">{ele.link} </a>
+                                    </Td>
+                                    <Td isNumeric>{ele.date}</Td>
                                     <Td isNumeric>
                                         <button
                                             onClick={() => deleteData(index)}>
@@ -141,14 +158,12 @@ const SimpleCard = () => {
                                 </Tr>
                             );
                         })}
-
-
                     </Tbody>
                 </Table>
             </TableContainer>
             ;
         </>
     );
-}
+};
 
 export default SimpleCard;
