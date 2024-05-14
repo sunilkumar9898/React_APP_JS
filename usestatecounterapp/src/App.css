@@ -54,7 +54,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3)
 
 .btn button:nth-child(2)
 {
-    background-image: linear-gradient(to right, #323130 0%,  #8f8d8a  100%);
+    background-image: linear-gradient(to right, #c18e17 0%,  #fe9902  100%);
 
   cursor: pointer;
 }
