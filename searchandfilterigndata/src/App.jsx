@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import { useEffect } from "react";
 
 const formdetails = {
     name: "",
@@ -9,14 +8,15 @@ const formdetails = {
     date: "",
 };
 let url = "http://localhost:8000/Data";
+
 function App() {
     const [details, setDetails] = useState(formdetails);
     const [response, setResponse] = useState([]);
     const [selected, setSelected] = useState("");
+    const [search, setSearch] = useState("");
+    const [updateId, setUpdateId] = useState(null);
 
-    // const [filtername, setFiltername] = useState(" ");
-    const [search, Setsearch] = useState("");
-    let searchData = response.filter((ele) =>
+    const searchData = response.filter((ele) =>
         ele.name.toLowerCase().includes(search.toLowerCase())
     );
 
@@ -30,16 +30,14 @@ function App() {
 
     const submitbtn = async () => {
         try {
-            if (updatevalue) {
-                await axios.patch(`${url}/${updatevalue}`, details);
+            if (updateId) {
+                await axios.put(`${url}/${updateId}`, details);
+                setUpdateId(null);
             } else {
                 await axios.post(url, details);
             }
-
             setDetails(formdetails);
             getData();
-
-            console.log(details);
         } catch (error) {
             console.log(error);
         }
@@ -47,34 +45,34 @@ function App() {
 
     const getData = async () => {
         try {
-            let res = await axios.get("http://localhost:8000/Data");
+            let res = await axios.get(url);
             setResponse(res.data);
-            console.log(res.data);
         } catch (error) {
             console.log(error);
         }
     };
+
     useEffect(() => {
         getData();
     }, []);
 
     const delData = async (id) => {
         try {
-            let del = await axios.delete(`http://localhost:8000/Data/${id}`);
+            let del = await axios.delete(`${url}/${id}`);
             getData();
-            console.log(del);
         } catch (error) {
             console.log(error);
         }
     };
 
-    // <---------------for filtet value based on name------------>
-
     const selectedValue = (e) => {
         setSelected(e.target.value);
     };
 
-    // let filterdata = selected ? response.filter((ele) => ele.name === selected) : response;
+    const updateData = (item) => {
+        setDetails(item);
+        setUpdateId(item.id);
+    };
 
     return (
         <>
@@ -106,7 +104,9 @@ function App() {
                     onChange={inputvalue}
                     required
                 />
-                <button onClick={submitbtn}>SUBMIT</button>
+                <button onClick={submitbtn}>
+                    {updateId ? "Update" : "Submit"}
+                </button>
             </div>
 
             <div className="tabledata">
@@ -115,7 +115,7 @@ function App() {
                         type="text"
                         placeholder="SEARCH BY NAME"
                         value={search}
-                        onChange={(e)=>Setsearch(e.target.value)}
+                        onChange={(e) => setSearch(e.target.value)}
                     />
                     <select
                         name=""
@@ -140,13 +140,16 @@ function App() {
                         </tr>
                     </thead>
                     <tbody>
-                        {searchData.length &&
+                        {searchData.length > 0 &&
                             searchData.map((item, index) => (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
                                     <td>{item.name}</td>
                                     <td>
-                                        <a href={item.url} target="_blank">
+                                        <a
+                                            href={item.url}
+                                            target="_blank"
+                                            rel="noreferrer">
                                             {item.url.slice(0, 40) + "......"}
                                         </a>
                                     </td>
@@ -156,7 +159,10 @@ function App() {
                                             onClick={() => delData(item.id)}>
                                             Delete
                                         </button>
-                                        <button>Update</button>
+                                        <button
+                                            onClick={() => updateData(item)}>
+                                            Update
+                                        </button>
                                     </td>
                                 </tr>
                             ))}
