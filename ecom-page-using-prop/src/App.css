@@ -1,0 +1,130 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #0b0c0f;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.logo{
+    width: 10%;
+
+}
+.logo img{
+    width: 40%;
+    padding: 0px 20px;
+}
+nav .nav_link {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+nav .nav_link a {
+    font-weight: bold;
+    color: rgb(223, 220, 220);
+    text-decoration: none;
+}
+
+
+.search{
+    width: 30%;
+}
+
+.search input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.45) inset;
+
+}
+
+
+
+.footer{
+
+  background-color: #0b0c0f;
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+  padding: 50px;
+}
+
+.footerlink{
+  display: flex;
+  border-bottom: 2px solid rgb(149, 144, 144);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footerlink div a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: 200;
+  margin-top: 10px;
+
+}
+.footerlink div a:hover{
+color: rgb(163, 155, 155);
+transform: translateX(10px) scale(1.1);
+transition: .3s ease-in-out;
+}
+
+.footerlink div a:nth-child(1){
+    font-size: 20px;
+    font-weight: 900;
+    border-bottom: 2px solid rgb(180, 173, 170);
+    padding-bottom: 5px;
+
+}
+.icons{
+    text-align: center;
+    width: 20%;
+
+    padding-top: 30px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.icons i{
+padding: 8px;
+font-weight: 900;
+border-radius: 50%;
+margin: auto;
+
+border: 1px solid white;
+cursor: pointer;
+}
+
+.icons i:hover{
+    box-shadow: 0px 0px 20px  rgb(223, 5, 5);
+         transform: translateY(-5px) scale(1.1);
+
+    transition: .3s ;
+}
+
+.email{
+    text-align: center;
+    margin-top: 20px;
+
+    /* font-size: clamp(15px ,3vw,30px); */
+}
+.email a{
+    color: whitesmoke;
+
+}
