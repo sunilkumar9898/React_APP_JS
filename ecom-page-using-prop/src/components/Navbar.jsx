@@ -19,6 +19,9 @@ const Navbar = () => {
                   <Link to={"/about"}>GIRL </Link>
                   <Link to={"/contact"}>WOMEN </Link>
               </div>
+              <div className="hemburger">
+                  <span>&#9776;</span>
+              </div>
           </nav>
       </div>
   );

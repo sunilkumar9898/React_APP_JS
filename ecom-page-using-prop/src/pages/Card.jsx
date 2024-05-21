@@ -8,8 +8,10 @@ const Card = ({ data }) => {
           {data.map((ele) => {
               return (
                   <div className="card_div" key={ele.id}>
-                      <img src={ele.image} alt="" />
-                      <p>Product : {ele.name+"...." }</p>
+                      <div className='img_sec'>
+                          <img src={ele.image} alt="" />
+                      </div>
+                      <p>Product : {ele.name + "...."}</p>
                       <p> $ : {ele.price}</p>
                       <p> Rating : {ele.rating}</p>
                       <div className="btn">

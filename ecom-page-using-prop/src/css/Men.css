@@ -1,8 +1,9 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 95%;
-    gap: 20px;
+ grid-template-columns: repeat(
+                auto-fit, minmax(270px, 1fr));
+    width: 90%;
+    gap: 60px 40px;
     margin: 100px auto;
 }
 .container .card_div {
@@ -10,10 +11,21 @@
         0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
         0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
     padding: 20px;
+    transition: .3s ease-in-out;
+
+}
+
+
+.container .card_div:hover{
+
+transform: scale(1.05);
+cursor: pointer;
 }
 
 .btn {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: space-between;
 }
 .btn button:nth-child(1) {
@@ -50,6 +62,19 @@
     color: white;
     transition: .3s ease-in-out;
 }
+
+.img_sec{
+    border: 2px solid rgb(243, 238, 238);
+    overflow: hidden;
+}
 .container img {
-    width: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    transition: .5s ease-in;
+}
+
+.container img:hover{
+    transform: scale(1.3);
+
 }
