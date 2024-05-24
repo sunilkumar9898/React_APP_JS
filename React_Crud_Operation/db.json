@@ -6,19 +6,9 @@
       "email": "webdevlopersunil1997@gmail.com"
     },
     {
-      "id": "ffd9",
-      "name": "ramu singh gsdffgdas",
-      "email": "webdevlopersunil1997@gmail.com"
-    },
-    {
       "id": "5e73",
       "name": "aaaa",
       "email": "webdevlopersunil1997@gmail.com"
-    },
-    {
-      "id": "b611",
-      "name": "Suhail Khan ",
-      "email": "alice@example.com"
     },
     {
       "id": "a1f9",
@@ -44,11 +34,6 @@
       "id": "091d",
       "name": "pooja kumar",
       "email": "PoojaKumari@gmail.com"
-    },
-    {
-      "id": "fd58",
-      "name": "manu",
-      "email": "manu@gmail.com"
     },
     {
       "id": "0750",
@@ -80,7 +65,12 @@
     {
       "id": "1024",
       "name": "Girdhari Singh Choudhary ",
-      "email": "Girdhari@gmail.com"
+      "email": "Girdhari@gmail.comz"
+    },
+    {
+      "id": "b6ea",
+      "name": "ramu singh",
+      "email": "webdevlopersunil1997@gmail.com"
     }
   ]
 }
