@@ -70,6 +70,7 @@ cursor: pointer;
 .container img {
     width: 80%;
     margin: auto;
+    aspect-ratio: 1/1.2;
     display: flex;
     transition: .5s ease-in;
 }

@@ -8,8 +8,8 @@ body {
     width: 25%;
     padding: 25px;
     background-color: #cccccc;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     margin: 50px auto;
-    /* border: 1px solid black; */
 }
 
 form {
@@ -47,3 +47,67 @@ form button{
 .btn{
     background-color: green;
 }
+
+table thead {
+    padding: 10px !important;
+    background-color: rgb(168, 162, 162);
+}
+table tbody tr td{
+    padding: 5px;
+}
+table tr th{
+    padding: 8px;
+}
+table tbody tr td button{
+    background-color: rgb(252, 8, 8);
+    border: none;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+table tbody tr td button:hover{
+    background-color: rgb(169, 8, 8);
+    cursor: pointer;
+}
+table tbody tr td button:nth-child(2){
+    background-color: rgb(82, 143, 11);
+    border: none;
+    margin-left: 10px;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+table tbody tr td button:nth-child(2):hover{
+    background-color: rgb(41, 61, 18);
+    border: none;
+    margin-left: 10px;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+
+
+
+
+
+
+
+/* card details  */
+.card_div{
+    width: 90%;
+    margin: 40px auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.card_details{
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(39, 42, 39, 0.119);
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+

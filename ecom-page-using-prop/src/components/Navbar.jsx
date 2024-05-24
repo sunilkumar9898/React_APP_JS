@@ -2,6 +2,19 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Navbar = () => {
+
+const nav = () => {
+    let navbar = document.getElementById("nav_link");
+    let displayStyle = window.getComputedStyle(navbar).display;
+
+    if (displayStyle === "block") {
+        navbar.style.display = "none";
+    } else {
+        navbar.style.display = "block";
+    }
+};
+
+
   return (
       <div>
           <nav className="navbar">
@@ -14,15 +27,16 @@ const Navbar = () => {
               <div className="search">
                   <input type="search" placeholder="Search" />
               </div>
-              <div className="nav_link">
-                  <Link to={"/"}> MEN </Link>
-                  <Link to={"/about"}>GIRL </Link>
-                  <Link to={"/contact"}>WOMEN </Link>
+              <div className="nav_link" id="nav_link">
+                  <Link to={"/"}> Men </Link>
+                  <Link to={"/about"}>Girl </Link>
+                  <Link to={"/contact"}>Women </Link>
               </div>
-              <div className="hemburger">
+              <div className="hemburger" onClick={nav}>
                   <span>&#9776;</span>
               </div>
           </nav>
+
       </div>
   );
 }

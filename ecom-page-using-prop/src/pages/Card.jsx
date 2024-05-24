@@ -2,6 +2,7 @@ import React from 'react'
 import "../css/Men.css";
 
 const Card = ({ data }) => {
+    
 
   return (
       <div className='container'>

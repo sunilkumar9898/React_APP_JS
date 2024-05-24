@@ -5,11 +5,15 @@ import Card from "./Card";
 
 const Men = () => {
     const [men, setMen] = useState([]);
+    const [loading,setLoading] = useState(true)
     const getmenData = async () => {
         try {
-            let res = await axios.get("http://localhost:8000/men");
+            let res = await axios.get(
+                "https://renderjsondata.onrender.com/men"
+            );
             console.log(res.data);
             setMen(res.data);
+            setLoading(false)
         } catch (error) {
             console.log(error);
         }
@@ -20,8 +24,11 @@ const Men = () => {
     }, []);
 
     return (
-        <div >
-            <Card data={men}/>
+        <div>
+            <div style={{ marginTop: "100px", textAlign: "center" }}>
+                {loading ? <h1>loading .... </h1> : <Card data={men} />}
+            </div>
+            ;
         </div>
     );
 };
