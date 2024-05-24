@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.form {
+    width: 25%;
+    padding: 25px;
+    background-color: #cccccc;
+    margin: 50px auto;
+    /* border: 1px solid black; */
+}
+
+form {
+    width: 100%;
+    display: inline-grid;
+    gap: 10px;
+    margin: auto;
+}
+
+.form input{
+    width: 100%;
+    padding: 10px 0px;
+}
+
+form button{
+    padding: 8px 0px;
+    border: none;
+    background-color: rgb(68, 65, 65);
+    color:white ;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/* ABOUT FORM CSS  */
+
+.form h1{
+    text-align: center;
+    color: rgb(52, 49, 49);
+}
+.btn{
+    background-color: green;
+}
