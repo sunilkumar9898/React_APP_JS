@@ -48,15 +48,19 @@ form button{
     background-color: green;
 }
 
-table thead {
-    padding: 10px !important;
-    background-color: rgb(168, 162, 162);
+
+table{
+    border: none;
 }
+
+
 table tbody tr td{
     padding: 5px;
 }
 table tr th{
-    padding: 8px;
+    padding: 10px;
+    background-color: #696767;
+    color: white;
 }
 table tbody tr td button{
     background-color: rgb(252, 8, 8);
@@ -68,6 +72,14 @@ table tbody tr td button{
 table tbody tr td button:hover{
     background-color: rgb(169, 8, 8);
     cursor: pointer;
+}
+
+table tbody tr:nth-child(odd){
+background-color: rgba(158, 167, 166, 0.403);
+}
+
+table tbody tr:nth-child(even){
+background-color: rgba(254, 252, 249, 0.828);
 }
 table tbody tr td button:nth-child(2){
     background-color: rgb(82, 143, 11);
