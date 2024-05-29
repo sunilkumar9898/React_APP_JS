@@ -1,0 +1,60 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+
+.container div{
+    background-color: rgb(233, 226, 226);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btnn{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnn button{
+    cursor: pointer;
+    padding: 5px 15px;
+}
+img{
+    width:70%;
+}
+.draw_box{
+        width: 100%;
+        background-color: red;
+}
+.drawer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+
+
+}
+
+.drawer input{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+ .btn {
+
+    display: flex;
+    width: 20%;
+    margin:15px auto;
+    justify-content: center;
+
+
+}
+
+.btn button{
+padding: 7px 15px;
+border: none;
+background-color: green;
+    cursor: pointer;
+    color: white;
+}

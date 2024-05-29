@@ -31,7 +31,6 @@ const Home = () => {
 
 
   const postData = async() => {
-
         try {
             await axios.post("http://localhost:8080/data", details);
             alert("submitted");
@@ -66,9 +65,8 @@ const Home = () => {
 
   const updateData = (id) => {
     let selectitem = value.find((ele) => ele.id === id)
-    console.log(selectitem);
     if (selectitem) {
-      setDetails(selectitem)
+      setDetails(selectitem )
       setUpdateid(id)
     }
   }
