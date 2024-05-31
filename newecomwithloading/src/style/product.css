@@ -58,3 +58,8 @@ background-color: green;
     cursor: pointer;
     color: white;
 }
+
+.draw_box{
+    background-color: red;
+    width: 500px;
+}

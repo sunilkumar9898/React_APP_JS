@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import './App.css'
-import Mainrouter from './mainrouter/Mainrouter'
-import Navbar from './components/Navbar'
+import "./App.css";
+import Mainrouter from "./mainrouter/Mainrouter";
+import Navbar from "./components/Navbar";
+import ProductBased from "./pages/Filter";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0);
 
-  return (
-    <>
-<Navbar />
-<Mainrouter />
-  </>
-  )
+    return (
+        <>
+            <Navbar />
+            <ProductBased />
+            {/* <Mainrouter /> */}
+        </>
+    );
 }
 
-export default App
+export default App;

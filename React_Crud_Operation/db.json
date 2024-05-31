@@ -2,7 +2,7 @@
   "data": [
     {
       "id": "77fa",
-      "name": "aaaadgfdsdfgddddddgh",
+      "name": "manish kumar",
       "email": "webdevlopersunil1997@gmail.com"
     },
     {
@@ -44,12 +44,17 @@
       "id": "47a2",
       "name": "Manjeet SIngh kumar",
       "email": "Ramapal singh@gmail.com"
+    },
+    {
+      "id": "da88",
+      "name": "manish kumar",
+      "email": "main@gmail.com"
     }
   ],
   "studentData": [
     {
       "id": "445f",
-      "name": "Suhail",
+      "name": "Suhail Khan ",
       "email": "Deep@gmail.com"
     },
     {
@@ -64,7 +69,7 @@
     },
     {
       "id": "b6ea",
-      "name": "ramu singh",
+      "name": "ramu singh dsdsfffdsfds",
       "email": "webdevlopersunil1997@gmail.com"
     }
   ]
