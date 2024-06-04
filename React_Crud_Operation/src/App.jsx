@@ -11,8 +11,8 @@ function App() {
     return (
         <>
             <Navbar />
-            <ProductBased />
-            {/* <Mainrouter /> */}
+            {/* <ProductBased /> */}
+            <Mainrouter />
         </>
     );
 }

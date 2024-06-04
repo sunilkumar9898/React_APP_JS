@@ -15,15 +15,22 @@ let product = [
 
 const ProductBased = () => {
     const [products, setProduct] = useState(product);
-    const filterData = () => {
-        let newarr = product.filter((ele) => ele.rating > 4);
-        setProduct(newarr)
 
+    // console.log(products, "123456");
+
+    const filterData = () => {
+        let newarr = products.filter((ele) => ele.rating > 4);
+        setProduct(newarr)
     };
+
+
+
+
     return (
         <div>
             <h1>All product list</h1>
             <button onClick={filterData}>Top Products</button>
+        
             <div
                 style={{
                     display: "grid",
