@@ -41,6 +41,7 @@ display: flex;
 padding: 50px 50px;
 flex-direction: column;
 gap: 10px;
+border-right: 1px solid rgb(63, 64, 63);
 }
 
 .btn_div button{

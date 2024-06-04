@@ -35,26 +35,29 @@ const Product = () => {
     };
     // < ----------------------- Serch by title value --------- >
     const handleSeacrh = () => {
-        if (search === "") {
-            setAllproduct(product);
-        } else {
+
             let searchValue = product.filter((ele) =>
                 ele.title.toLowerCase().includes(search)
             );
             setAllproduct(searchValue);
-        }
+
     };
 
-    const handleChange = (e) => {
-        setSearch(e.target.value);
-        handleSeacrh();
-    };
 
+  const handleChange = (e) => {
+      setSearch(e.target.value);
+      if (e.target.value === "") {
+          setAllproduct(product);
+      } else {
+          handleSeacrh();
+      }
+  };
     // <--------------------reset data -------->
     const resetdata = () => {
         setAllproduct(product);
       setFilter("")
-        settotal("");
+      settotal("");
+
     };
 
     useEffect(() => {
