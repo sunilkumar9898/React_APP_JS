@@ -1,10 +1,10 @@
 import React from 'react'
+import './man.css'
 
 const Men = () => {
   return (
-    <div>
-      <h1>hello men page</h1>
-    </div>
+    <>
+    <h1>hello</h1></>
   )
 }
 

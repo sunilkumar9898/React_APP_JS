@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Product = () => {
+const [loading,setLoading]=useState(true)
     const [product, setProduct] = useState([]);
   const [allproduct, setAllproduct] = useState([]);
   const[filter,setFilter]=useState("")
@@ -14,6 +15,7 @@ const Product = () => {
             console.log(res.data);
             setProduct(res.data);
             setAllproduct(res.data);
+            setLoading(false)
         } catch (error) {
             console.log(error);
         }
@@ -60,15 +62,22 @@ const Product = () => {
 
     };
 
+
+
     useEffect(() => {
         getData();
     }, []);
+
+
+
+
     return (
         <>
             <div className="total_item">
                 <button>Total Item = {product.length}</button>
                 <button>Filter by rating = {filter.length}</button>
                 <button>Filter Price Item = {total.length}</button>
+
             </div>
             <div className="container">
                 <div className="btn_div">
@@ -87,7 +96,7 @@ const Product = () => {
                 </div>
 
                 <div className="main_div">
-                    {allproduct.map((ele) => {
+                {loading?(<h1>Loading...............</h1>) :(   allproduct.map((ele) => {
                         return (
                             <div key={ele.id} className="map_div">
                                 <div>
@@ -104,7 +113,7 @@ const Product = () => {
                                 </div>
                             </div>
                         );
-                    })}
+                    }))}
                 </div>
             </div>
         </>
