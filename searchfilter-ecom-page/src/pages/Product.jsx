@@ -108,8 +108,8 @@ const [loading,setLoading]=useState(true)
                                     </h3>
                                 </div>
                                 <div>
-                                    <h4>{ele.price}</h4>
-                                    <h5>{ele.rating.rate}</h5>
+                                    <h4>Price {ele.price}</h4>
+                                    <h5>Rating : {ele.rating.rate}</h5>
                                 </div>
                             </div>
                         );

@@ -27,7 +27,7 @@
     border-radius: 3px;
     border: none;
     outline: none;
-    /* background-color: grey; */
+    text-transform: uppercase;
     color: black;
     border-bottom: 1px solid rgb(28, 27, 27);
 }
@@ -65,9 +65,12 @@
     border-radius: 5px;
     margin: 50px auto;
     overflow-x: scroll;
+    border: none;
+
 }
 
 table thead tr th {
+    border-radius: 5px;
     padding: 10px;
     background-color: rgb(161, 155, 155);
     color: white;
