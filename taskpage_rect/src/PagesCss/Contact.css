@@ -1,0 +1,15 @@
+.contact_form {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.contact_form img {
+    width: 100%;
+}
+
+.form_img {
+    width: 50%;
+    border: 1px solid red;
+}
+

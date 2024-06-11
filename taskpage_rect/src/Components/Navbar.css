@@ -1,0 +1,25 @@
+ul li{
+    list-style-type: none;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+background-color: #010221;
+color: white;
+
+}
+.nav_link_ul{
+    width: 30%;
+}
+.nav_link{
+    display: flex;
+    justify-content: space-around;
+
+}
