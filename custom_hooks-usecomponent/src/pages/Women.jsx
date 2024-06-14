@@ -3,7 +3,7 @@ import Useapi from './Useapi'
 import Usecard from './Usecard';
 
 const Women = () => {
-  const { loading,data, getdata } = Useapi("https://renderjsondata.onrender.com/women");
+  const { loading,data, getdata ,deldata,postData } = Useapi("https://renderjsondata.onrender.com/women");
   return (
       <div>
           {loading ? (
@@ -16,7 +16,7 @@ const Women = () => {
                   Loading..........
               </h1>
           ) : (
-              <Usecard propdata={data} />
+              <Usecard propdata={data} deldata={deldata} postdata={postData} />
           )}
       </div>
   );

@@ -9,8 +9,31 @@ const Useapi = (url) => {
         try {
             let res = await axios.get(url);
             setData(res.data);
-            setLoading(false)
-            console.log(res.data,"123654");
+            setLoading(false);
+            console.log(res.data, "123654");
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    // <----------------DELETE DATA --------------------?
+
+    const deldata = async (id) => {
+        try {
+            let res = axios.delete(`${url}/${id}`);
+            alert("deleted successfully");
+            getdata()
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    // <------------------------Post Data --------------->
+
+    const postData = async (newData) => {
+        try {
+            await axios.post(url,newData);
+                getdata();
         } catch (error) {
             console.log(error);
         }
@@ -20,7 +43,7 @@ const Useapi = (url) => {
         getdata();
     }, [url]);
 
-    return {loading, data, getdata };
+    return { loading, data, getdata, deldata,postData };
 };
 
 export default Useapi;
