@@ -4,7 +4,7 @@ import Usecard from './Usecard';
 
 
 const Home = () => {
-    const { loading, data, getdata, deldata,postData } = Useapi(
+    const { loading, data, getdata, deldata, postData, updateddata } = Useapi(
         "https://renderjsondata.onrender.com/men"
     );
 
@@ -21,7 +21,12 @@ const Home = () => {
                   Loading..........
               </h1>
           ) : (
-              <Usecard propdata={data} deldata={deldata} postdata={postData} />
+              <Usecard
+                  propdata={data}
+                  deldata={deldata}
+                  postdata={postData}
+                  updateddata={updateddata}
+              />
           )}
       </div>
   );

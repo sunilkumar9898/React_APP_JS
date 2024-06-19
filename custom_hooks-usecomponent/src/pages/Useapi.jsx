@@ -5,6 +5,7 @@ const Useapi = (url) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
+
     const getdata = async () => {
         try {
             let res = await axios.get(url);
@@ -39,11 +40,19 @@ const Useapi = (url) => {
         }
     };
 
+
+    // < -------------------- UpDATED DATA ---------------->
+
+    const updateddata = (id) => {
+        let selectItem = data.find((ele) => ele.id === id)
+        console.log(selectItem);
+    }
+
     useEffect(() => {
         getdata();
     }, [url]);
 
-    return { loading, data, getdata, deldata,postData };
+    return { loading, data, getdata, deldata, postData, updateddata };
 };
 
 export default Useapi;

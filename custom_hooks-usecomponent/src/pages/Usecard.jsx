@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Button, Drawer } from "antd";
+import '../Css/Cart.css'
 
 const intialvalue = {
     image: "",
     name: "",
     price: "",
 };
-const Usecard = ({ propdata, deldata ,postdata }) => {
+const Usecard = ({ propdata, deldata, postdata, updateddata }) => {
     const [details, setDetails] = useState(intialvalue);
     const [open, setOpen] = useState(false);
     const showDrawer = () => {
@@ -24,14 +25,13 @@ const Usecard = ({ propdata, deldata ,postdata }) => {
         }));
     };
 
-
     const handleSubmit = () => {
         postdata(details);
-        setDetails(intialvalue)
-          onClose();
-        alert("success")
-    console.log(details);
-        }
+        setDetails(intialvalue);
+        onClose();
+        alert("success");
+        console.log(details);
+    };
     return (
         <>
             <div className="admin">
@@ -50,12 +50,17 @@ const Usecard = ({ propdata, deldata ,postdata }) => {
                             <button onClick={() => deldata(ele.id)}>
                                 delete
                             </button>
+                            <button onClick={()=>updateddata(ele.id)}> Update</button>
                         </div>
                     );
                 })}
             </div>
 
-            <Drawer title="Basic Drawer" onClose={onClose} open={open}>
+            <Drawer
+                className="drawer"
+                title="Basic Drawer"
+                onClose={onClose}
+                open={open}>
                 <input
                     type="text"
                     placeholder="Image"
@@ -63,7 +68,8 @@ const Usecard = ({ propdata, deldata ,postdata }) => {
                     value={details.image}
                     onChange={handlechange}
                 />
-                <br /><br />
+                <br />
+                <br />
                 <input
                     type="text"
                     placeholder="Name"
@@ -71,7 +77,8 @@ const Usecard = ({ propdata, deldata ,postdata }) => {
                     value={details.name}
                     onChange={handlechange}
                 />
-                <br /><br />
+                <br />
+                <br />
                 <input
                     type="text"
                     placeholder="price"
@@ -79,9 +86,12 @@ const Usecard = ({ propdata, deldata ,postdata }) => {
                     value={details.price}
                     onChange={handlechange}
                 />
-                <br /><br />
+                <br />
+                <br />
 
-                <button onClick={handleSubmit}>submit</button>
+                <div className="btnnn">
+                    <button onClick={handleSubmit}>submit</button>
+                </div>
             </Drawer>
         </>
     );
